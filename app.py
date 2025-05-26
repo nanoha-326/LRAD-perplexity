@@ -184,12 +184,14 @@ with st.form(key="chat_form", clear_on_submit=True):
         if not is_valid_input(user_input):
             error_message = "エラーが発生しています。時間を空けてから再度お試しください。"
             st.session_state.chat_log.insert(0, (user_input, error_message))
-            st.experimental_rerun()
+            #st.experimental_rerun()
+        　　st.stop()
 
         similar_q, similar_a = find_similar_question(user_input, faq_df)
         final_response = generate_response(similar_q, similar_a, user_input)
         st.session_state.chat_log.insert(0, (user_input, final_response))
-        st.experimental_rerun()
+        #st.experimental_rerun()
+        st.stop()
 st.markdown("</div>", unsafe_allow_html=True)
 
 # チャット履歴表示
