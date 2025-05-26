@@ -185,7 +185,7 @@ with st.form(key="chat_form", clear_on_submit=True):
             error_message = "エラーが発生しています。時間を空けてから再度お試しください。"
             st.session_state.chat_log.insert(0, (user_input, error_message))
             #st.experimental_rerun()
-        　　st.stop()
+            st.stop()
 
         similar_q, similar_a = find_similar_question(user_input, faq_df)
         final_response = generate_response(similar_q, similar_a, user_input)
