@@ -67,6 +67,9 @@ def find_similar_question(user_input: str, faq_df: pd.DataFrame):
     top_idx = scores.argmax()
     return faq_df.iloc[top_idx]['質問'], faq_df.iloc[top_idx]['回答']
 
+print("類似質問の検索結果:", top_result)
+
+
 # --- Perplexity補完 ---
 def generate_response(context_question: str, context_answer: str, user_input: str) -> str:
     prompt = (
