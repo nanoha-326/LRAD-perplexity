@@ -1,6 +1,4 @@
 streamlit
 pandas
-sentence-transformers
-scikit-learn
 requests
-pillow
+rapidfuzz>=3.0
