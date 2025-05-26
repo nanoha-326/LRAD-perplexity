@@ -14,7 +14,7 @@ faq_df = pd.read_csv("faq.csv")
 def find_similar_question(user_input, faq_df):
     questions = faq_df["質問"].tolist()
     best_match = process.extractOne(user_input, questions, scorer=fuzz.token_sort_ratio)
-    if best_match[1] >= 60:
+    if best_match[1] >= 40:
         answer = faq_df.loc[faq_df["質問"] == best_match[0], "回答"].values[0]
         return best_match[0], answer
     return None, None
