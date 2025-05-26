@@ -6,7 +6,7 @@ import requests
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import datetime
-import secret_keys          # 既存のまま利用可（不要なら削除）
+#import secret_keys          # 既存のまま利用可（不要なら削除）
 from PIL import Image        # 既存のまま利用可（不要なら削除）
 import re
 import unicodedata
